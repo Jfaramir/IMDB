@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var profesionales_1 = require("./profesionales");
 var peliculas_1 = require("./peliculas");
+var imdb_1 = require("./imdb");
 var actor1 = new profesionales_1.Proffesional("Keanu Reeves", 56, "Masculino", 77, 180, "Negro", "Café", "Blanco europeo", false, "Canadiense", 0, "Actor");
 var actor2 = new profesionales_1.Proffesional("Adam Sandler", 54, "Masculino", 75, 177, "Negro", "Verdoso", "Blanco europeo", false, "Estadounidense", 0, "Actor");
 var actor3 = new profesionales_1.Proffesional("Noriyuki Morita", 73, "Masculino", 70, 160, "Negro", "Marrones", "Asiatico", true, "Estadounidense", 0, "Actor");
@@ -47,4 +48,7 @@ movie4.isMCU = false;
 movie4.mainCharacterName = "Tadeo Jones";
 movie4.producer = "El Toro Pictures";
 movie4.distributor = "Paramount Pictures";
-console.log(movie.mostrarPeliculas(movie));
+//console.log(movie.mostrarPeliculas(movie));
+var arrayMovies = [movie, movie2, movie3, movie4];
+var imdb = new imdb_1.Imdb(arrayMovies);
+console.log(imdb.peliculas);

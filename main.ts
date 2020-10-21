@@ -1,5 +1,6 @@
 import {Proffesional} from './profesionales';
 import {Movie} from './peliculas';
+import {Imdb} from './imdb';
 
 var actor1 = new Proffesional("Keanu Reeves",56,"Masculino",77,180,"Negro","Café","Blanco europeo",false,"Canadiense",0,"Actor");
 var actor2 = new Proffesional("Adam Sandler",54,"Masculino",75,177,"Negro","Verdoso","Blanco europeo",false,"Estadounidense",0,"Actor");
@@ -52,4 +53,10 @@ movie4.producer = "El Toro Pictures";
 movie4.distributor = "Paramount Pictures";
 
 
-console.log(movie.mostrarPeliculas(movie));
+//console.log(movie.mostrarPeliculas(movie));
+
+const arrayMovies:Movie[] = [movie,movie2,movie3,movie4]; 
+
+var imdb = new Imdb(arrayMovies);
+
+console.log(imdb.peliculas);
