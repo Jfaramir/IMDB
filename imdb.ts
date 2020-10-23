@@ -1,4 +1,5 @@
 import {Movie} from './peliculas';
+import {Proffesional} from './profesionales';
 
 export class Imdb {
     public peliculas:Movie[]
