@@ -1,5 +1,9 @@
+import { Proffesional } from './profesionales';
 import {Movie} from './peliculas';
+
 var fs = require('fs');
+/* var readline = require('readline'); */
+
 export class Imdb {
     public peliculas:Movie[]
     constructor(peliculas:Movie[]) {
@@ -11,5 +15,9 @@ export class Imdb {
     public obtenertInstanciaIMDB( nombreFichero : string) {
       var imdb2 : Imdb;
         return  imdb2 = (JSON.parse(fs.readFileSync(nombreFichero)));   
+    }
+
+    public nuevaPelicula() {
+        
     }
 }
