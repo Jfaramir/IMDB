@@ -8,10 +8,11 @@ export class Proffesional {
     public eyeColor:string;
     public race:string;
     public isRetired:boolean;
-    public nationality:string;
+    public nationality:string [];
     public oscarNumbers:number;
     public profession:string;
-    constructor(name:string,age:number,genre:string,weight:number,height:number,hairColor:string,eyeColor:string,race:string,isRetired:boolean,nationality:string,oscarNumbers:number,profession:string) {
+    constructor(name:string,age:number,genre:string,weight:number,height:number,hairColor:string,
+        eyeColor:string,race:string,isRetired:boolean,nationality:string [],oscarNumbers:number,profession:string) {
         this.name = name;
         this.age = age;
         this.genre = genre;
@@ -25,6 +26,9 @@ export class Proffesional {
         this.oscarNumbers = oscarNumbers;
         this.profession = profession;
     }
-
-    
+    mostrarProffesional() {
+         let myArray : unknown [] = [];
+         myArray.push(this.name, this.age,this.genre,this.weight,this.height,this.hairColor,this.eyeColor,this.race,this.isRetired,this.nationality,this.oscarNumbers,this.profession);
+         console.log(myArray); 
+    }
 }

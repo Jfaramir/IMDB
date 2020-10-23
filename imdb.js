@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.Imdb = void 0;
 var Imdb = /** @class */ (function () {
     function Imdb(peliculas) {

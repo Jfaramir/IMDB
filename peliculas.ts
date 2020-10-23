@@ -21,14 +21,9 @@ export class Movie {
         this.genre = genre;
     }
     
-    /**
-     * mostrarPeliculas
-     */
+    
     public mostrarPeliculas(arrayPeliculas:Movie) {
-        var arrayAux:unknown[] = [];
-        arrayAux.push(arrayPeliculas.title,arrayPeliculas.releaseYear,arrayPeliculas.actors,arrayPeliculas.nacionality,arrayPeliculas.director,arrayPeliculas.writer,arrayPeliculas.language,
-                arrayPeliculas.platform,arrayPeliculas.isMCU,arrayPeliculas.mainCharacterName,arrayPeliculas.producer,arrayPeliculas.distributor,arrayPeliculas.genre);
-
+       
         return arrayPeliculas;
     }
 

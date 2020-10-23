@@ -2,11 +2,11 @@ import {Proffesional} from './profesionales';
 import {Movie} from './peliculas';
 import {Imdb} from './imdb';
 
-var actor1 = new Proffesional("Keanu Reeves",56,"Masculino",77,180,"Negro","Café","Blanco europeo",false,"Canadiense",0,"Actor");
-var actor2 = new Proffesional("Adam Sandler",54,"Masculino",75,177,"Negro","Verdoso","Blanco europeo",false,"Estadounidense",0,"Actor");
-var actor3 = new Proffesional("Noriyuki Morita",73,"Masculino",70,160,"Negro","Marrones","Asiatico",true,"Estadounidense",0,"Actor");
-var director1 = new Proffesional("Mel Gibson",64,"Masculino",78,177,"Negro","Azul","Blanco europeo",false,"Estadounidense",2,"Director");
-var escritor1 = new Proffesional("Joanne Rowling",55,"Femenino",65,165,"Rubio","verdoso","Blanco europeo",false,"Britanica",0,"Escritora");
+var actor1 = new Proffesional("Keanu Reeves",56,"Masculino",77,180,"Negro","Café","Caucásico",false,["Canadiense", "Australiano"],0,"Actor");
+var actor2 = new Proffesional("Adam Sandler",54,"Masculino",75,177,"Negro","Verdoso","Caucásico",false,["Estadounidense", "Uruguayo"],0,"Actor");
+var actor3 = new Proffesional("Noriyuki Morita",73,"Masculino",70,160,"Negro","Marrones","Asiatico",true,["Estadounidense"],0,"Actor");
+var director1 = new Proffesional("Mel Gibson",64,"Masculino",78,177,"Negro","Azul","Caucásico",false,["Estadounidense"],2,"Director");
+var escritor1 = new Proffesional("Joanne Rowling",55,"Femenino",65,165,"Rubio","verdoso","Caucásico",false,["Britanica"],0,"Escritora");
 
 var movie = new Movie("Jhon Wick",2014,"Estadounidense",["Accion"]);
 movie.actors = [actor1,actor2,actor3];
@@ -57,6 +57,14 @@ movie4.distributor = "Paramount Pictures";
 
 const arrayMovies:Movie[] = [movie,movie2,movie3,movie4]; 
 
+
+console.log(actor1.mostrarProffesional());
+console.log(actor2.mostrarProffesional());
+console.log(actor3.mostrarProffesional());
+console.log(director1.mostrarProffesional());
+console.log(escritor1.mostrarProffesional());
+
 var imdb = new Imdb(arrayMovies);
 
-console.log(imdb.peliculas);
+
+//  console.log(imdb.peliculas);
