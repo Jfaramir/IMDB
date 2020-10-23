@@ -22,8 +22,12 @@ export class Movie {
     }
     
     
-    public mostrarPeliculas(arrayPeliculas:Movie) {
-        return arrayPeliculas;
+    public mostrarPeliculas() {
+        let myArray : unknown [] = [];
+        myArray.push(this.title, this.releaseYear,this.actors,this.nacionality,this.director,this.writer,this.language,this.platform,this.isMCU,this.mainCharacterName,
+            this.producer,this.distributor,this.genre);
+        console.log(myArray); 
+
     }
 
 }

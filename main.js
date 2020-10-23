@@ -2,7 +2,6 @@
 exports.__esModule = true;
 var profesionales_1 = require("./profesionales");
 var peliculas_1 = require("./peliculas");
-var imdb_1 = require("./imdb");
 var actor1 = new profesionales_1.Proffesional("Keanu Reeves", 56, "Masculino", 77, 180, "Negro", "Café", "Caucásico", false, ["Canadiense", "Australiano"], 0, "Actor");
 var actor2 = new profesionales_1.Proffesional("Adam Sandler", 54, "Masculino", 75, 177, "Negro", "Verdoso", "Caucásico", false, ["Estadounidense", "Uruguayo"], 0, "Actor");
 var actor3 = new profesionales_1.Proffesional("Noriyuki Morita", 73, "Masculino", 70, 160, "Negro", "Marrones", "Asiatico", true, ["Estadounidense"], 0, "Actor");
@@ -48,15 +47,15 @@ movie4.isMCU = false;
 movie4.mainCharacterName = "Tadeo Jones";
 movie4.producer = "El Toro Pictures";
 movie4.distributor = "Paramount Pictures";
-//console.log(movie.mostrarPeliculas(movie));
-var arrayMovies = [movie, movie2, movie3, movie4];
+console.log(movie.mostrarPeliculas());
+//const arrayMovies : Movie[] = [movie,movie2,movie3,movie4]; 
 /* console.log(actor1.mostrarProffesional());
 console.log(actor2.mostrarProffesional());
 console.log(actor3.mostrarProffesional());
 console.log(director1.mostrarProffesional());
 console.log(escritor1.mostrarProffesional());
  */
-var imdb = new imdb_1.Imdb(arrayMovies);
+//var imdb = new Imdb(arrayMovies);
 //  console.log(imdb.peliculas);
 /* let archivoJson : string =  JSON.stringify( imdb.peliculas);
 var fs = require('fs');
@@ -64,5 +63,5 @@ var fs = require('fs');
 // fs.readFileSync("./imdbBBDD.json");
 var imdb2 = new Imdb (JSON.parse(fs.readFileSync("./imdbBBDD.json")));
 console.log( imdb2.peliculas); */
-imdb.escribirEnFicherJSON("Imdb2.json");
+//imdb.escribirEnFicherJSON("Imdb2.json");
 //console.log( imdb.obtenertInstanciaIMDB( "miPrimeraBBDD.json"));

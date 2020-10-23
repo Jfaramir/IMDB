@@ -8,8 +8,10 @@ var Movie = /** @class */ (function () {
         this.nacionality = nacionality;
         this.genre = genre;
     }
-    Movie.prototype.mostrarPeliculas = function (arrayPeliculas) {
-        return arrayPeliculas;
+    Movie.prototype.mostrarPeliculas = function () {
+        var myArray = [];
+        myArray.push(this.title, this.releaseYear, this.actors, this.nacionality, this.director, this.writer, this.language, this.platform, this.isMCU, this.mainCharacterName, this.producer, this.distributor, this.genre);
+        console.log(myArray);
     };
     return Movie;
 }());
