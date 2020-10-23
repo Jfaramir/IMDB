@@ -55,16 +55,26 @@ movie4.distributor = "Paramount Pictures";
 
 //console.log(movie.mostrarPeliculas(movie));
 
-const arrayMovies:Movie[] = [movie,movie2,movie3,movie4]; 
+const arrayMovies : Movie[] = [movie,movie2,movie3,movie4]; 
 
 
-console.log(actor1.mostrarProffesional());
+/* console.log(actor1.mostrarProffesional());
 console.log(actor2.mostrarProffesional());
 console.log(actor3.mostrarProffesional());
 console.log(director1.mostrarProffesional());
 console.log(escritor1.mostrarProffesional());
-
+ */
 var imdb = new Imdb(arrayMovies);
 
 
 //  console.log(imdb.peliculas);
+
+/* let archivoJson : string =  JSON.stringify( imdb.peliculas);
+var fs = require('fs');
+// fs.writeFileSync( "./imdbBBDD.json", archivoJson );
+// fs.readFileSync("./imdbBBDD.json");
+var imdb2 = new Imdb (JSON.parse(fs.readFileSync("./imdbBBDD.json"))); 
+console.log( imdb2.peliculas); */
+
+imdb.escribirEnFicherJSON("Imdb2.json");
+//console.log( imdb.obtenertInstanciaIMDB( "miPrimeraBBDD.json"));
