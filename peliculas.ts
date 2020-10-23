@@ -23,7 +23,6 @@ export class Movie {
     
     
     public mostrarPeliculas(arrayPeliculas:Movie) {
-       
         return arrayPeliculas;
     }
 
