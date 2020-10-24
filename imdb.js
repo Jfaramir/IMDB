@@ -56,14 +56,18 @@ var Imdb = /** @class */ (function () {
                 newPelicula.mainCharacterName = respuestas[43];
                 newPelicula.producer = respuestas[44];
                 newPelicula.distributor = respuestas[45];
-                console.log(newPelicula.mostrarPeliculas());
+                var arrayPeliculas = [newPelicula];
+                var imdb;
+                var imdbAux;
+                imdb = (JSON.parse(fs.readFileSync("imdbBBDD.json")));
+                var addImdb = new Imdb(arrayPeliculas);
+                imdbAux = [imdb, addImdb];
+                var json = JSON.stringify(imdbAux);
+                console.log(json);
+                fs.writeFileSync('imdbBBDD.json', json);
                 process.exit();
             }
         });
-        if (respuestas.length == preguntas.length && (last = true)) {
-            console.log("aaaaa");
-            return newPelicula;
-        }
     };
     return Imdb;
 }());

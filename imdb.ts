@@ -1,5 +1,6 @@
 import { Proffesional } from './profesionales';
 import {Movie} from './peliculas';
+import { table } from 'console';
 
 var fs = require('fs');
 /* var readline = require('readline'); */
@@ -17,7 +18,7 @@ export class Imdb {
         return  imdb2 = (JSON.parse(fs.readFileSync(nombreFichero)));   
     }
 
-    public nuevaPelicula():Movie {
+    public nuevaPelicula() {
         
         var preguntas = ["Titulo de la pelicula ","Año de lanzamiento ","Nacionalidad de la pelicula ","Genero de la pelicula ","Nombre del actor ","Edad ","Genero ","Peso ","Altura ",
             "Color de pelo ","Color de ojos ","Raza ","Retirado?¿ (true/false) ","Nacionalidad ","Numero de oscars ","Profesion ","Nombre del director ","Edad ","Genero ","Peso ","Altura ",
@@ -65,16 +66,25 @@ export class Imdb {
                 newPelicula.mainCharacterName = respuestas[43];
                 newPelicula.producer = respuestas[44];
                 newPelicula.distributor = respuestas[45];
-                console.log(newPelicula.mostrarPeliculas());
+
+                var arrayPeliculas:Movie[] = [newPelicula];
+
+                var imdb : Imdb;
+                var imdbAux : Imdb[];
+                imdb = (JSON.parse(fs.readFileSync("imdbBBDD.json")));
+
+                var addImdb = new Imdb(arrayPeliculas);
+                
+                imdbAux  = [imdb,addImdb];
+                
+                var json = JSON.stringify(imdbAux);
+
+                console.log(json);
+
+                fs.writeFileSync('imdbBBDD.json', json);
 
                 process.exit();
             }
         })
-        
-        if (respuestas.length  == preguntas.length && (last = true)) {
-            console.log("aaaaa");
-            return newPelicula;   
-        }
-
     }
 }

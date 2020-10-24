@@ -69,12 +69,12 @@ var imdb = new Imdb(arrayMovies);
 
 //  console.log(imdb.peliculas);
 
-/* let archivoJson : string =  JSON.stringify( imdb.peliculas);
-var fs = require('fs');
-// fs.writeFileSync( "./imdbBBDD.json", archivoJson );
+//let archivoJson : string =  JSON.stringify( imdb.peliculas);
+//var fs = require('fs');
+//fs.writeFileSync( "./imdbBBDD.json", archivoJson );
 // fs.readFileSync("./imdbBBDD.json");
-var imdb2 = new Imdb (JSON.parse(fs.readFileSync("./imdbBBDD.json"))); 
-console.log( imdb2.peliculas); */
+//var imdb2 = new Imdb (JSON.parse(fs.readFileSync("./imdbBBDD.json"))); 
+//console.log( imdb2.peliculas); 
 
 //imdb.escribirEnFicherJSON("Imdb2.json");
 //console.log( imdb.obtenertInstanciaIMDB( "miPrimeraBBDD.json"));
