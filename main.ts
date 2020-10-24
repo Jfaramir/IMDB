@@ -80,5 +80,3 @@ console.log( imdb2.peliculas); */
 //console.log( imdb.obtenertInstanciaIMDB( "miPrimeraBBDD.json"));
 
 imdb.nuevaPelicula();
-
-console.log(imdb.peliculas[4]);

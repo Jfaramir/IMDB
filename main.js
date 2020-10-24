@@ -67,4 +67,3 @@ console.log( imdb2.peliculas); */
 //imdb.escribirEnFicherJSON("Imdb2.json");
 //console.log( imdb.obtenertInstanciaIMDB( "miPrimeraBBDD.json"));
 imdb.nuevaPelicula();
-console.log(imdb.peliculas[4]);
