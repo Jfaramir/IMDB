@@ -4,7 +4,6 @@ exports.Imdb = void 0;
 var profesionales_1 = require("./profesionales");
 var peliculas_1 = require("./peliculas");
 var fs = require('fs');
-/* var readline = require('readline'); */
 var Imdb = /** @class */ (function () {
     function Imdb(peliculas) {
         this.peliculas = peliculas;

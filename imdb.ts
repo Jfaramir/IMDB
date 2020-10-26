@@ -1,14 +1,10 @@
 import { Proffesional } from './profesionales';
 import {Movie} from './peliculas';
-<<<<<<< HEAD
-var fs = require ('fs');
-=======
-import { table } from 'console';
+
 
 var fs = require('fs');
 /* var readline = require('readline'); */
 
->>>>>>> ad07c838da8c2939384c012e4214309bb9f15764
 export class Imdb {
     public peliculas:Movie[]
     constructor(peliculas:Movie[]) {

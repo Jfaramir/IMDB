@@ -14,13 +14,8 @@ export class Movie {
     public mainCharacterName: string;
     public producer: string;
     public distributor: string;
-<<<<<<< HEAD
-    public genre: string[];
-    constructor(title?:string,releaseYear?:number,nacionality?:string,genre?:string[]) {
-=======
     public genre: string;
     constructor(title:string,releaseYear:number,nacionality:string,genre:string) {
->>>>>>> ad07c838da8c2939384c012e4214309bb9f15764
         this.title = title;
         this.releaseYear = releaseYear;
         this.nacionality = nacionality;
