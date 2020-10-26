@@ -1,3 +1,4 @@
+import { fstat } from 'fs';
 import {Proffesional} from './profesionales'
 
 export class Movie {
@@ -13,21 +14,24 @@ export class Movie {
     public mainCharacterName: string;
     public producer: string;
     public distributor: string;
+<<<<<<< HEAD
     public genre: string[];
     constructor(title?:string,releaseYear?:number,nacionality?:string,genre?:string[]) {
+=======
+    public genre: string;
+    constructor(title:string,releaseYear:number,nacionality:string,genre:string) {
+>>>>>>> ad07c838da8c2939384c012e4214309bb9f15764
         this.title = title;
         this.releaseYear = releaseYear;
         this.nacionality = nacionality;
         this.genre = genre;
     }
     
-    
     public mostrarPeliculas() {
         let myArray : unknown [] = [];
-        myArray.push(this.title, this.releaseYear,this.actors,this.nacionality,this.director,this.writer,this.language,this.platform,this.isMCU,this.mainCharacterName,
-            this.producer,this.distributor,this.genre);
+        myArray.push(this.title, this.releaseYear,this.actors,this.nacionality,this.director,this.writer,this.language,this.platform,this.isMCU,
+            this.mainCharacterName,this.producer,this.distributor,this.genre);
         console.log(myArray); 
-
     }
-
+    
 }
