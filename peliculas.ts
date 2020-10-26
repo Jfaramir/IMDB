@@ -14,7 +14,7 @@ export class Movie {
     public producer: string;
     public distributor: string;
     public genre: string[];
-    constructor(title:string,releaseYear:number,nacionality:string,genre:string[]) {
+    constructor(title?:string,releaseYear?:number,nacionality?:string,genre?:string[]) {
         this.title = title;
         this.releaseYear = releaseYear;
         this.nacionality = nacionality;
