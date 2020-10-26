@@ -79,4 +79,4 @@ var imdb = new Imdb(arrayMovies);
 //imdb.escribirEnFicherJSON("Imdb2.json");
 //console.log( imdb.obtenertInstanciaIMDB( "miPrimeraBBDD.json"));
 
-imdb.nuevaPelicula();
+imdb.nuevaPelicula("imdbBBDD.json");

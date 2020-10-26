@@ -4,6 +4,7 @@ exports.Imdb = void 0;
 var profesionales_1 = require("./profesionales");
 var peliculas_1 = require("./peliculas");
 var fs = require('fs');
+/* var readline = require('readline'); */
 var Imdb = /** @class */ (function () {
     function Imdb(peliculas) {
         this.peliculas = peliculas;
@@ -15,7 +16,7 @@ var Imdb = /** @class */ (function () {
         var imdb2;
         return imdb2 = (JSON.parse(fs.readFileSync(nombreFichero)));
     };
-    Imdb.prototype.nuevaPelicula = function () {
+    Imdb.prototype.nuevaPelicula = function (bbdd) {
         var preguntas = ["Titulo de la pelicula ", "Año de lanzamiento ", "Nacionalidad de la pelicula ", "Genero de la pelicula ", "Nombre del actor ", "Edad ", "Genero ", "Peso ", "Altura ",
             "Color de pelo ", "Color de ojos ", "Raza ", "Retirado?¿ (true/false) ", "Nacionalidad ", "Numero de oscars ", "Profesion ", "Nombre del director ", "Edad ", "Genero ", "Peso ", "Altura ",
             "Color de pelo ", "Color de ojos ", "Raza ", "Retirado?¿ (true/false) ", "Nacionalidad ", "Numero de oscars ", "Profesion ", "Nombre del escritor ", "Edad ", "Genero ", "Peso ", "Altura ",
@@ -28,6 +29,7 @@ var Imdb = /** @class */ (function () {
         var newEscritor;
         var first = true;
         var last = false;
+        var nombreFichero = bbdd;
         function pregunta(i) {
             process.stdout.write(preguntas[i]);
         }
@@ -58,12 +60,12 @@ var Imdb = /** @class */ (function () {
                 var arrayPeliculas = [newPelicula];
                 var imdb;
                 var imdbAux;
-                imdb = (JSON.parse(fs.readFileSync("imdbBBDD.json")));
+                imdb = (JSON.parse(fs.readFileSync(nombreFichero)));
                 var addImdb = new Imdb(arrayPeliculas);
                 imdbAux = [imdb, addImdb];
                 var json = JSON.stringify(imdbAux);
                 console.log(json);
-                fs.writeFileSync('imdbBBDD.json', json);
+                fs.writeFileSync(nombreFichero, json);
                 process.exit();
             }
         });

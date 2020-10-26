@@ -18,7 +18,7 @@ export class Imdb {
         return  imdb2 = (JSON.parse(fs.readFileSync(nombreFichero)));   
     }
 
-    public nuevaPelicula() {
+    public nuevaPelicula( bbdd : string ) {
         
         var preguntas = ["Titulo de la pelicula ","Año de lanzamiento ","Nacionalidad de la pelicula ","Genero de la pelicula ","Nombre del actor ","Edad ","Genero ","Peso ","Altura ",
             "Color de pelo ","Color de ojos ","Raza ","Retirado?¿ (true/false) ","Nacionalidad ","Numero de oscars ","Profesion ","Nombre del director ","Edad ","Genero ","Peso ","Altura ",
@@ -32,7 +32,7 @@ export class Imdb {
         var newEscritor: Proffesional;
         var first:boolean = true;
         var last:boolean = false;
-
+        var nombreFichero : string = bbdd;
         function pregunta(i:number) {
             process.stdout.write(preguntas[i]);
         }
@@ -71,7 +71,7 @@ export class Imdb {
 
                 var imdb : Imdb;
                 var imdbAux : Imdb[];
-                imdb = (JSON.parse(fs.readFileSync("imdbBBDD.json")));
+                imdb = (JSON.parse(fs.readFileSync(nombreFichero)));
 
                 var addImdb = new Imdb(arrayPeliculas);
                 
@@ -81,7 +81,7 @@ export class Imdb {
 
                 console.log(json);
 
-                fs.writeFileSync('imdbBBDD.json', json);
+                fs.writeFileSync(nombreFichero, json);
 
                 process.exit();
             }
